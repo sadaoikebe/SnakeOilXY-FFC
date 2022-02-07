@@ -1,0 +1,25 @@
+[mcu xiao]
+serial: /dev/serial/by-id/usb-Klipper_rp2040_xxxxxxxxxxxxxxxx-if00
+
+[adxl345]
+cs_pin: xiao:gpio1
+spi_bus: spi0a
+
+[bltouch]
+sensor_pin: ^xiao:gpio27
+control_pin: xiao:gpio29
+
+[extruder]
+heater_pin: xiao:gpio4
+sensor_pin: xiao:gpio26
+
+[heater_fan hotend_fan]
+##	Hotend Fan
+pin: xiao:gpio7
+
+[fan]
+##	Print Cooling Fan
+pin: xiao:gpio6
+
+[stepper_x]
+endstop_pin: ^xiao:gpio28
