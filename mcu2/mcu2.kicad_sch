@@ -2458,7 +2458,7 @@
     (property "Value" "100u/35V" (id 1) (at 185.42 100.7109 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Capacitor_SMD:CP_Elec_6.3x5.4" (id 2) (at 182.5752 104.14 0)
+    (property "Footprint" "Capacitor_SMD:CP_Elec_6.3x7.7" (id 2) (at 182.5752 104.14 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 181.61 100.33 0)
@@ -2668,7 +2668,7 @@
       (reference "C1") (unit 1) (value "10u") (footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder")
     )
     (path "/e2efdb57-d4a9-42a3-8b7f-aa4cdff50a39"
-      (reference "C2") (unit 1) (value "100u/35V") (footprint "Capacitor_SMD:CP_Elec_6.3x5.4")
+      (reference "C2") (unit 1) (value "100u/35V") (footprint "Capacitor_SMD:CP_Elec_6.3x7.7")
     )
     (path "/09c48721-96f9-49c8-aa3e-cea6dd620691"
       (reference "D1") (unit 1) (value "11EQS03L") (footprint "Diode_THT:D_A-405_P7.62mm_Horizontal")
