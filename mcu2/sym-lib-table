@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name "rp2040_zero")(type "KiCad")(uri "/Users/ikebesadao/SnakeOilXY-FFCmod/rp2040_zero.pretty/rp2040_zero.kicad_sym")(options "")(descr ""))
+  (lib (name "motor_driver")(type "KiCad")(uri "/Users/ikebesadao/rp2040_zero.pretty/motor_driver.kicad_sym")(options "")(descr ""))
+)

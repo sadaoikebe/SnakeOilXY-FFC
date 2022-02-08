@@ -1,0 +1,5 @@
+(fp_lib_table
+  (lib (name "rp2040_zero")(type "KiCad")(uri "/Users/ikebesadao/SnakeOilXY-FFCmod/rp2040_zero.pretty")(options "")(descr ""))
+  (lib (name "motor_driver")(type "KiCad")(uri "/Users/ikebesadao/SnakeOilXY-FFCmod/motor_driver.pretty")(options "")(descr ""))
+  (lib (name "FFCconnector")(type "KiCad")(uri "/Users/ikebesadao/SnakeOilXY-FFCmod/FFCconnector.pretty")(options "")(descr ""))
+)
