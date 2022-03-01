@@ -1,27 +1,23 @@
 # FFC mod for SnakeOilXY 3-D printer
 
-These boards are to simplify the connection to the toolhead of SnakeOil-XY 3D printer.
-It is a set of MCU board and a board for tool head.
-
-I've designed boards that provide following functions:
-
-* Heater (24V50W)
-* Heater Thermistor
-* Hotend Fan (24V)
-* Part Fan (24V)
-* X Endstop
-* BLTouch (or 24V inductive probe)
-* Extruder stepper
-* Accelerometer ADXL345 (on-board)
-
-In order to reduce the number of contacts as much as possible, I also created an MCU board. This system is compatible only with Klipper.
-In the future, I may make it possible to connect via CAN bus so that it can work with RRF, etc.
-
-![boards](boards.jpeg)
-![toolhead](toolhead-installed.jpeg)
+These boards are for SnakeOil-XY 3-D printer. It makes connection to the toolhead simpler.
+It consists of two PCBs: MCU board and tool head board. This system is compatible only with Klipper.
 
 The MCU board needs to be connected to the Raspberry Pi via USB and supplied with 24V power, and the TMC2209 driver needs to be inserted.
 A 1.0mm pitch 26-pin 20624 FFC cable is used.
+
+![block diagram](blockdiagram.drawio.svg)
+
+In the future, I may make it possible to connect via CAN bus so that it can work with RRF, etc.
+
+* Printer.cfg
+
+It assumes multi-mcu functionality of klipper firmware. Printer.cfg needs to be modified like this:
+
+[Printer.cfg modification](klipper/printer_cfg_modification.txt)
+
+![boards](boards.jpeg)
+![toolhead](toolhead-installed.jpeg)
 
 * Connection of the heater
 
