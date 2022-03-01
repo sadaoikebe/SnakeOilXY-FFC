@@ -6,6 +6,7 @@ It is a set of MCU board and a board for tool head.
 I've designed boards that provide following functions:
 
 * Heater (24V50W)
+* Heater Thermistor
 * Hotend Fan (24V)
 * Part Fan (24V)
 * X Endstop
