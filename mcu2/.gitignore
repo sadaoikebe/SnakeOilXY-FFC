@@ -32,3 +32,5 @@ fp-info-cache
 
 # manufacturing files
 jlcpcb/gerber
+
+*.FCStd1
