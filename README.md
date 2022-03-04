@@ -16,9 +16,9 @@ In order to reduce contacts and wiring labor (rather than connecting around 20 w
 
 ## Klipper configuration
 
-It assumes multi-mcu functionality of klipper firmware. Printer.cfg needs to be modified like this:
+It assumes multi-mcu functionality of klipper firmware.
 
-[Printer.cfg modification](klipper/printer_cfg_modification.txt)
+[sample printer.cfg](klipper/sample_printer.cfg)
 
 ## Heater connection
 
