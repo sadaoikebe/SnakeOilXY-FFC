@@ -120,7 +120,8 @@
       },
       "track_widths": [
         0.0,
-        0.25
+        0.25,
+        1.905
       ],
       "via_dimensions": [
         {
@@ -403,7 +404,9 @@
         "nets": [
           "+3V3",
           "+5V",
-          "GND"
+          "GND",
+          "HOTEND_FAN_SW",
+          "PART_FAN_SW"
         ],
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
