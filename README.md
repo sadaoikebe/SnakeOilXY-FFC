@@ -67,4 +67,5 @@ The DC motor control circuit uses MOSFETs for low-side switching. Positive termi
 ![waveform](images/24vfan_switch_wave.jpeg)
 
 ### A poor-quality driver might still return counter EMF, so wouldn't it be a good idea to have a diode just in case?
-No. I doubt that a driver which leaks counter EMF to the primary circuit can properly spin the fan for the first place... Many existing MCU boards (BTT, Mellow, FYSETC...) don't employ such diodes. It is not a good idea to increase the complexity of the circuit while gain no additional protection.
+Many existing MCU boards (BTT, Mellow, FYSETC...) don't employ such diodes.
+
