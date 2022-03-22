@@ -19,8 +19,6 @@ It's an ordinary toolhead PCB with an ADXL345 accelerometer on-board, and it has
 
 ### Toolhead board Assembly
 
-It's straightforward to assemble the toolhead board.
-
 Tricky steps are:
 
 * The two rows of the connectors are close, so two rows of connectors must be installed facing each other. Therefore, the positive and negative terminals for the hotend fan and the part cooling fan are different. (red arrow in the picture)
