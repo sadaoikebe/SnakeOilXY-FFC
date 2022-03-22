@@ -29,6 +29,10 @@ The MCU board has schottky diode on it, so 24V probe can be connected to Zmin pi
 
 ![Toolhead](images/toolhead-issues.jpeg)
 
+![bltouch connection](bltouch.drawio.svg)
+
+![induction probe connection](induction_probe.drawio.svg)
+
 ### Toolhead board installation
 
 It's designed to mount onto adxl_mount, however the X endstop switch is a bit thicker than the adxl_mount. Print and use spacer in the toolhead folder.
