@@ -22,7 +22,7 @@ It's an ordinary toolhead PCB with an ADXL345 accelerometer on-board, and it has
 Tricky steps are:
 
 * The two rows of the connectors are close, so two rows of connectors must be installed facing each other. Therefore, the positive and negative terminals for the hotend fan and the part cooling fan are on the different side. (red arrow in the picture)
-* One of the heater terminals is too close to the FFC connector, so unfortunately, KFxxx-type screw terminal block wouldn't fit. Heater cables should be soldered.  It's still able to disassemble without solder iron - loosening the bolt on the hotend will do the job. (yellow arron in the picture)
+* One of the heater terminals is too close to the FFC connector, so unfortunately, KFxxx-type screw terminal block wouldn't fit. Heater cables should be soldered.  It's still able to disassemble without solder iron - loosening the bolt on the hotend will do the job. (yellow arrow in the picture)
 * Bypass capacitor C2 is in the way of the stepper 4-pin connector. The bottom side of the stepper connector needs to be chamfered a little.
 * It has Bltouch(servo) and Zmin(probe) connectors in order to use Z probes. Bltouch, inductive probe, or klicky probe can be used. These connectors have cable colors printed on the silk, but once the connectors are soldered, the silk becomes unreadable. The Zmin(probe) connector has 24V power in it. Bltouch uses both servo and Zmin connectors except the 24V pin. As for inductive/klicky probes, servo connector can be left open. Using 3-pin probe connector (24V, Zmin, GND) is enough.
 The MCU board has schottky diode on it, so 24V probe can be connected to Zmin pin without frying the MCU.
@@ -33,7 +33,9 @@ The MCU board has schottky diode on it, so 24V probe can be connected to Zmin pi
 
 It's designed to mount onto adxl_mount, however the X endstop switch is a bit thicker than the adxl_mount. Print and use spacer in the toolhead folder.
 
-The back side of the stepper connector may touch the M3 bolt underneath the toolhead board. In order to avoid the unwanted contact, I recommend to cut the excess wire on the bottom and stick some capton tape to have better insulation.
+The back side of the stepper connector may touch the M3 bolt underneath the toolhead board. In order to avoid the unwanted contact, I recommend to cut the excess wire on the bottom and apply some capton tape to have better insulation.
+
+![Toolhead](images/toolhead-installation.jpeg)
 
 ## MCU Board (revision 2)
 
