@@ -35,7 +35,6 @@ Tricky steps are:
 ![bltouch connection](bltouch.drawio.svg)
 
 ![induction probe connection](induction_probe.drawio.svg)
-
 ![fan connection](fan_connectors.drawio.svg)
 
 ### Toolhead board installation
@@ -48,13 +47,17 @@ The back side of the stepper connector may touch the M3 bolt underneath the tool
 
 ## MCU Board (revision 2)
 
-In order to have less contacts and make wiring easier, I also designed a MCU board exclusive for this FFC config. The MCU board just needs to be connected to the Raspberry Pi via USB and supplied with 24V power. A 1.0mm pitch 26-pin 20624 FFC cable is used.
+For ease of connection, this board is dedicated to this FFC configuration. The MCU board just needs to be connected to the Raspberry Pi via USB and supplied with 24V power. A 1.0mm pitch 26-pin 20624 FFC cable is used.
 
-For the extruder motor drivers, the current circuit configuration only supports UART-connected smart drivers (like TMC2209). SPI connection is not supported. The photo shows a FYSETC driver, but other manufacturers' drivers may also be used.
+It only supports UART-connected smart drivers (like TMC2209) for stepper motor driver. SPI or direct connections are not supported.
 
 FFC connector can be soldered to either the front or back side of the board. Considering cooling and wiring, it's better to place it on the back side.
 
 This board has schottky diode on it, so 24V probe can be connected to Zmin pin without frying the MCU.
+
+Power => Blue LED
+
+Heater and Fan MOSFETs => Yellow LED
 
 ![MCU board](images/ffc-mcu.jpeg)
 
@@ -98,10 +101,7 @@ When a 24V 50W heater is used, there is a loss of about 1W including circuits, c
 
 ## DC Motor Circuit
 
-The DC motor control circuit uses MOSFETs for low-side switching. Positive terminal of the motor is always connected to the 24V power supply, and the negative terminal is controlled by the MOSFET. This circuit doesn't have a diode to dissipate counter EMF (usually called as a flyback diode). This is because DC brushless motors generally have a full bridge driver in it, and the counter EMF does not return to the primary circuit. With an oscilloscope we can confirm that no counter EMF returns to the primary circuit.
+The DC motor control circuit uses MOSFETs for low-side switching. Positive terminal of the fan is always connected to the 24V power supply, and the negative terminal is controlled by the MOSFET. This circuit doesn't have a diode to dissipate counter EMF (usually called as a flyback diode). This is because DC brushless motors generally have a full bridge driver in it, and the counter EMF does not return to the primary circuit. With an oscilloscope we can confirm that no counter EMF returns to the primary circuit. Many existing MCU boards (BTT, Mellow, FYSETC...) don't employ such diodes.
 ![cch477e](images/cch477e.jpeg)
 ![waveform](images/24vfan_switch_wave.jpeg)
-
-### A poor-quality driver might still return counter EMF, so wouldn't it be a good idea to have a diode just in case?
-Many existing MCU boards (BTT, Mellow, FYSETC...) don't employ such diodes.
 
