@@ -1,19 +1,23 @@
 # FFC mod for SnakeOil-XY 3-D printer
 
 This is a toolhead PCB suite for SnakeOil-XY 3-D printer.
-* It has a dedicated MCU and is connected to the toolhead by a dedicated ribbon cable, which makes connection simpler and also makes toolhead lighter.
-* It gives full functionality of toolhead while it only needs USB wire and 24V power supply connected to the MCU board.
-* It has an ADXL345 accelerometer on-board, which makes wiring even simpler.
+* It's a combo of a toolhead PCB and a dedicated MCU. MCU is connected to the toolhead by a ribbon cable, which makes connection simpler and also makes toolhead lighter.
+* It only needs USB wire and 24V power supply connected to the MCU board.
+* It has an ADXL345 accelerometer on-board.
 * It has an X endstop on board, which fits SnakeOilXY toolhead dimension.
 * This system is compatible only with Klipper.
 
 ![block diagram](blockdiagram.drawio.svg)
 
+## Appearance
+
 ![wiring](images/wiring.jpeg)
 
 ## Toolhead
 
-It's an ordinary toolhead PCB with an ADXL345 accelerometer on-board, and it has an X endstop which fits SnakeOil-XY toolhead dimension. This toolhead PCB can be attached onto adxl_mount to replace the ADXL345 PCB.
+This toolhead PCB can be attached onto adxl_mount to replace the ADXL345 PCB.
+
+It's a toolhead PCB with an ADXL345 accelerometer on-board, and it has an X endstop which fits SnakeOil-XY toolhead dimension.
 
 ![Toolhead](images/ffc-toolhead.jpeg)
 
@@ -21,17 +25,18 @@ It's an ordinary toolhead PCB with an ADXL345 accelerometer on-board, and it has
 
 Tricky steps are:
 
-* The two rows of the connectors are close, so two rows of connectors must be installed facing each other. Therefore, the positive and negative terminals for the hotend fan and the part cooling fan are on the different side. (red arrow in the picture)
-* One of the heater terminals is too close to the FFC connector, so unfortunately, KFxxx-type screw terminal block wouldn't fit. Heater cables should be soldered.  It's still able to disassemble without solder iron - loosening the bolt on the hotend will do the job. (yellow arrow in the picture)
+* The two rows of the connectors are close, so two rows of connectors must be installed facing each other. Please be careful of the polarity of the hotend fan and the part cooling fan connector... (red arrow in the picture)
+* Heater cables should be soldered. One of the heater terminals is close to the FFC connector, so unfortunately, screw terminal block (KF128 etc..) wouldn't fit. It's still able to disassemble without solder iron - loosening the bolt on the hotend will do the job. (yellow arrow in the picture)
 * Bypass capacitor C2 is in the way of the stepper 4-pin connector. The bottom side of the stepper connector needs to be chamfered a little.
-* It has Bltouch(servo) and Zmin(probe) connectors in order to use Z probes. Bltouch, inductive probe, or klicky probe can be used. These connectors have cable colors printed on the silk, but once the connectors are soldered, the silk becomes unreadable. The Zmin(probe) connector has 24V power in it. Bltouch uses both servo and Zmin connectors except the 24V pin. As for inductive/klicky probes, servo connector can be left open. Using 3-pin probe connector (24V, Zmin, GND) is enough.
-The MCU board has schottky diode on it, so 24V probe can be connected to Zmin pin without frying the MCU.
+* It has Bltouch(servo) and Zmin(probe) connectors in order to use Z probes. Bltouch, inductive probe, or klicky probe can be used. See below diagram for connection.
 
 ![Toolhead](images/toolhead-issues.jpeg)
 
 ![bltouch connection](bltouch.drawio.svg)
 
 ![induction probe connection](induction_probe.drawio.svg)
+
+![fan connection](fan_connectors.drawio.svg)
 
 ### Toolhead board installation
 
