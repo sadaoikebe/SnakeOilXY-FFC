@@ -61,6 +61,9 @@ Heater and Fan MOSFETs => Yellow LED
 
 ![MCU board](images/ffc-mcu.jpeg)
 
+### C1 capacity is too small
+On the rev2 MCU board, the capacitance of C1 is 10uF, which does not stabilize the hotend temperature sensor reading enough. It would be better to add a larger capacitor in parallel or add a smooth_time setting in the [extruder] section.
+
 ## Klipper configuration
 
 It assumes multi-mcu functionality of klipper firmware.
