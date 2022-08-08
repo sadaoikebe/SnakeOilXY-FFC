@@ -85,13 +85,20 @@ It assumes multi-mcu functionality of klipper firmware.
 * Capacitors, resistors
 * XH2.54 sockets (3x 2pin, 2x 3pin, 1x 4pin)
 
-## Defects
+## TODO
 
-### r0.1
+### r0.1 --> r0.2
 
 * The Drain and Source connections of the MOSFETs of the heater were reversed --> I changed the connections.
 * TVS diode are reversed --> Thankfully JLCPCB engineer fixed it. Need to rotate next time.
 * The clearance between the power supply/heater terminals and other parts are not enough --> Need increase the clearance.
+
+### r0.2 --> r0.3
+
+* RP2040-Zero appears to be a bit unreliable --> change to genuine Pico
+* add MAX31865 for thermistor
+* add KF301 terminal for heater
+* add AUX line
 
 ## Heater connection
 
@@ -101,10 +108,3 @@ When a 24V 50W heater is used, there is a loss of about 1W including circuits, c
 
 ![resistance-14cm](images/resistance-14cm.jpeg)
 ![resistance-53cm](images/resistance-53cm.jpeg)
-
-## DC Motor Circuit
-
-The DC motor control circuit uses MOSFETs for low-side switching. Positive terminal of the fan is always connected to the 24V power supply, and the negative terminal is controlled by the MOSFET. This circuit doesn't have a diode to dissipate counter EMF (usually called as a flyback diode). This is because DC brushless motors generally have a full bridge driver in it, and the counter EMF does not return to the primary circuit. With an oscilloscope we can confirm that no counter EMF returns to the primary circuit. Many existing MCU boards (BTT, Mellow, FYSETC...) don't employ such diodes.
-![cch477e](images/cch477e.jpeg)
-![waveform](images/24vfan_switch_wave.jpeg)
-
