@@ -95,10 +95,11 @@ It assumes multi-mcu functionality of klipper firmware.
 
 ### r0.2 --> r0.3
 
-* RP2040-Zero appears to be a bit unreliable --> change to genuine Pico
-* add MAX31865 for thermistor
+* Change MCU to genuine Pico as RP2040-Zero appears to be a bit unreliable
+* add wiring and pattern for MAX31865 and PT100 thermistor
 * add KF301 terminal for heater
 * add AUX line
+* add medusa toolhead support - allow for various X endstop placement
 
 ## Heater connection
 

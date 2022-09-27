@@ -1,4 +1,4 @@
 (sym_lib_table
-  (lib (name "rp2040_zero")(type "KiCad")(uri "/Users/ikebesadao/SnakeOilXY-FFCmod/rp2040_zero.pretty/rp2040_zero.kicad_sym")(options "")(descr ""))
-  (lib (name "motor_driver")(type "KiCad")(uri "/Users/ikebesadao/rp2040_zero.pretty/motor_driver.kicad_sym")(options "")(descr ""))
+  (lib (name "RPi_Pico")(type "Legacy")(uri "/Users/ikebesadao/SnakeOilXY-FFC/RPi_Pico.lib")(options "")(descr ""))
+  (lib (name "ffc_mcu_library")(type "KiCad")(uri "/Users/ikebesadao/SnakeOilXY-FFC/ffc_mcu_library.kicad_sym")(options "")(descr ""))
 )
