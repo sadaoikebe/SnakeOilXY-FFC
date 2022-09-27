@@ -1,4 +1,4 @@
 (fp_lib_table
-  (lib (name "FFCconnector")(type "KiCad")(uri "/Users/ikebesadao/SnakeOilXY-FFC/FFCconnector.pretty")(options "")(descr ""))
   (lib (name "RPi_Pico")(type "KiCad")(uri "/Users/ikebesadao/SnakeOilXY-FFC/RPi_Pico.pretty")(options "")(descr ""))
+  (lib (name "ffc_connectors")(type "KiCad")(uri "/Users/ikebesadao/SnakeOilXY-FFC/ffc_connectors.pretty")(options "")(descr ""))
 )
