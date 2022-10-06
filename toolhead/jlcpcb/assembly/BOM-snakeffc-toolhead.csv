@@ -1,3 +1,13 @@
 Comment,Designator,Footprint,LCSC
-0.1u,C2,C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,C28233
+0.1u,C2,C_0603_1608Metric,C14663
 ADXL345,U2,LGA-14_3x5mm_P0.8mm_LayoutBorder1x6y,C9667
+SERVO,J11,PinHeader_1x03_P2.54mm_Vertical,
+Conn_01x30,J4,ffc-30pin,
+ZMIN,J10,PinHeader_1x03_P2.54mm_Vertical,
+HOTEND_FAN,J8,PinHeader_1x02_P2.54mm_Vertical,
+HEATER,J5,KF301-5.0,
+PARTCOOLER_FAN,J9,PinHeader_1x02_P2.54mm_Vertical,
+E_STEPPER,J12,PinHeader_1x04_P2.54mm_Vertical,
+X_HOME,J13,limit_switch,
+AUX1,J16,PinHeader_1x01_P2.54mm_Vertical,
+PT100_NTC,J1,PinHeader_1x04_P2.54mm_Vertical,
